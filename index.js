@@ -12,18 +12,18 @@ const app = new Vue( {
     el: "#app",
     data: {
         price: "5000e",
-        produits: ["model1", "model2", "model3"],
-        commandes: [],
+        products: ["model1", "model2", "model3"],
+        adds: [],
     },
     methods:{
-        commander: function(produit){
-            console.log(produit)
-            this.commandes.push(produit);
+        addElement: function(product){
+            console.log(product)
+            this.adds.push(product);
+            this.calculer(price)
         },
-        retirer: function(index){
+        removeElement: function(index){
            //retirer l'element sélectionné du tableau 
-           this.commandes.splice(index, 1);
-
+           this.adds.splice(index, 1);
         }
     }
 })

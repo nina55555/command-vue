@@ -22,14 +22,14 @@
       <h1 v-bind:class="affichage">Produits</h1>
         <div class="row">
             <fiche-produit v-for="product in products">  
-                <button v-on:click="addElement(product) ">commander</button>{{product}} {{price}}
+                <button v-on:click="addElement(product) ">Commander</button>{{product}} {{price}}
             </fiche-produit>
            
                 
         </div>
         <br>
         <br>
-      <h2 v-bind:class="affichage-commandes" v-if="adds.lenght> 0">Mes commandes</h2>
+      <h2 v-bind:class="affichage-commandes" v-if="adds.length> 0">Mes commandes</h2>
         <div class="row">
             <fiche-commande v-for="(add, index) in adds">{{add}} {{price}} 
                 <button @click="removeElement(index)">Enlever du panier</button></fiche-commande>

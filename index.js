@@ -7,6 +7,7 @@ Vue.component('fiche-commande',{
     template: `<p class="paragraph">demo-commande </p>`,
 })
 */
+
 const app = new Vue( {
     el: "#app",
     data: {
@@ -18,7 +19,11 @@ const app = new Vue( {
         commander: function(produit){
             console.log(produit)
             this.commandes.push(produit);
+        },
+        retirer: function(index){
+           //retirer l'element sélectionné du tableau 
+           this.commandes.splice(index, 1);
+
         }
     }
-    
 })

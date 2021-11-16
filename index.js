@@ -14,6 +14,7 @@ const app = new Vue( {
         price: "5000e",
         products: ["model1", "model2", "model3"],
         adds: [],
+        display: "display-2",
     },
     methods:{
         addElement: function(product){
